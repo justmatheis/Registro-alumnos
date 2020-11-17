@@ -73,3 +73,16 @@ Sentencia finally
       conexion.close() # Cerramos la conexión
       print("La conexion ha finalizado") # Imprimos un mensaje de aviso
 ```
+
+# Para ejecutar el script:
+Desde el explorador de archivos de windows entrar a la siguiente ruta:
+
+        C:\Users\PC\AppData\Local\Programs\Python\Python39
+
+Dentro de la ruta, dar shift+clic_derecho y seleccionar la opción "Abrir la ventana de PowerShell aquí"
+
+Ejecutamos los siguientes comandos:
+```
+  > python -m pip install --upgrade pip setuptools wheel
+  > pip install mysql-connector-python
+```
