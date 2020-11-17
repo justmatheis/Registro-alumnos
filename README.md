@@ -74,10 +74,10 @@ Sentencia finally
       print("La conexion ha finalizado") # Imprimos un mensaje de aviso
 ```
 
-# Para ejecutar el script:
+# Requisitos previos:
 Desde el explorador de archivos de windows entrar a la siguiente ruta:
 
-        C:\Users\PC\AppData\Local\Programs\Python\Python39
+        C:\Users\nombre_de_usuario\AppData\Local\Programs\Python\Python39
 
 Dentro de la ruta, dar shift+clic_derecho y seleccionar la opción "Abrir la ventana de PowerShell aquí"
 
