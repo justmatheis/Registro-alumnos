@@ -1,7 +1,13 @@
 # Proyecto base de datos
 Repositorio que almacenará los cambios y archivos para el proyecto de taller de base de datos.
+Para ingresar a la base de datos en la nube usada para este ejemplo:
+1.- Ingresamos a: https://www.db4free.net/signup.php
+2.- En la parte izquierda seleccionamos la opción phpMyAdmin
+4.- Una vez ingresada la página, ingresamos el usuario: ulises2 y la contraseña 1234567!
+5.- Ejecutamos el código y listo:)
 
 # Importación
+Librerias usadas en el script
 ```python
   # Importamos la libreria de mysql para python
   # Desde la misma libreria importamos el objeto Error
