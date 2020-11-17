@@ -1,6 +1,7 @@
 # Proyecto base de datos
 Repositorio que almacenará los cambios y archivos para el proyecto de taller de base de datos.
 Para ingresar a la base de datos en la nube usada para este ejemplo:
+
 1.- Ingresamos a: https://www.db4free.net/signup.php
 
 2.- En la parte izquierda seleccionamos la opción phpMyAdmin
