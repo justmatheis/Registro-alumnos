@@ -1,8 +1,11 @@
 # Proyecto base de datos
 Repositorio que almacenará los cambios y archivos para el proyecto de taller de base de datos.
 
-# Titulo 1
+# Conexión
 ```python
   # Importamos la libreria de mysql para python
-  Matriz m = new Matriz(3, 4);
+  # Desde la misma libreria importamos el objeto Error
+  # por si se presenta errores en la conexión
+  import mysql.connector
+  from mysql.connector import Error
 ```
