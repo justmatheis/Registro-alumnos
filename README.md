@@ -33,3 +33,33 @@ Condicional que verifica que la conexión se cumpla
         print("Info del servidor: ",infoServer) # Información del servidor en el que se hostea
         cursor = conexion.cursor() # Creamos un objeto de la clase cursor para seleccionar datos
         cursor.execute("SELECT database()") # Llamado al metodo execute, el parametro es en comillas ya que se envia una cadena de texto que recibirá el gestor
+```
+        
+Selección de datos
+```python
+  registro = cursor.fetchone() # Creamos un objeto de la clase fetchone que indica que solo se obtendrá un valor de una tabla
+  print("Conectado a la base de datos ",registro) # Imprimimos el valor de la variable que guarda el nombre de la base de datos
+  cursor.execute("SELECT * FROM tabla_prueba") # Eejecutamos la sentencia que le mandaremos al gestor
+  resultados = cursor.fetchall() # Indica que se mostrarán diversos objetos de una tabla
+  for fila in resultados: # Ciclo for para mostrar los datos almacenados en un vector por cada registro
+    print("Número de estudiante: ",fila[0]) # Imprimimos el valor 1 del vetor
+    print("Nombre del estudiante: ",fila[1]) # ...
+    print("Edad del estudiante: ",fila[2]) # ...
+    print("Carrera: ",fila[3]) # Hasta el valor n del vector
+```
+# Método try-except
+Sentencia except
+```python
+  # Arroja la excepción si se encuentra un error en la conexión
+  except Error as ex:
+    print("Error durante la conexión",ex) # Imprime el error especifico
+```  
+Sentencia finally
+```python
+  # Método finally que se cumple si hay error o no en la conexión
+  # Es importante finalizar/cerrar la conexión a la base de datos 
+  finally:
+    if conexion.is_connected(): # Llamado al método is_connected
+      conexion.close() # Cerramos la conexión
+      print("La conexion ha finalizado") # Imprimos un mensaje de aviso
+```
