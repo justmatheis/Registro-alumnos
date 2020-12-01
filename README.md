@@ -86,3 +86,50 @@ Ejecutamos los siguientes comandos:
   > python -m pip install --upgrade pip setuptools wheel
   > pip install mysql-connector-python
 ```
+# Interfaces gráficas:
+Importamos la librerias necesarias.
+```python
+  import tkinter as tk
+  from tkinter import *
+  from tkinter import messagebox
+  from tkinter import ttk #Liberias usadas para mostrar interfaces
+  import mysql.connector
+  from mysql.connector import Error #Liberias para la conexión a la base de datos
+```
+
+Creamos las vistas, mediante la libreria TKINTER.
+```python
+  mywindow = Tk() #Llamado al método TKINTER
+  mywindow.geometry("650x350") #Dimensiones
+  mywindow.title("FORMULARIO DE INICIO") #Titulo de la ventana
+  mywindow.resizable(False,False)
+  mywindow.config(background = "#213141")
+  main_title = Label(text="FORMULARIO DE INICIO", font=("Cambria", 13), bg="#56CD63", fg="white", width="550", height="2")
+  main_title.pack()
+
+  username_label = Label(text="Usuario", bg="#FFEEDD") #Etiquetas
+  username_label.place(x=300, y=70) #Colocamos las etiquetas en el formulario
+  password_label = Label(text="Contraseña", bg="#FFEEDD")
+  password_label.place(x=295, y=150)
+
+  username = StringVar() #Declaramos variables
+  password = StringVar()
+  
+  username_entry = Entry(textvariable=username, width="40") #Creamos los campos de texto
+  password_entry = Entry(textvariable=password, width="40", show="*")
+
+  username_entry.place(x=200, y=100) #Colocamos los campos de texto al formulario
+  password_entry.place(x=200, y=180)
+
+  submit_btn = Button(mywindow, text="INICIAR SESION", command=validar, width="30", height="2", bg="#00CD63") #Creamos un botón para enviar los datos llaciendo llamado al metodo validar
+  submit_btn.place(x=215, y=250) #Colocamos el botón en el formulario
+
+  mywindow.mainloop()
+```
+
+
+
+
+
+
+
