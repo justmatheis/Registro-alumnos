@@ -97,7 +97,7 @@ Importamos la librerias necesarias.
   from mysql.connector import Error #Liberias para la conexión a la base de datos
 ```
 
-Creamos las vistas, mediante la libreria TKINTER.
+Creamos las vistas, mediante la libreria TKINTER (Ventana principal).
 ```python
   mywindow = Tk() #Llamado al método TKINTER
   mywindow.geometry("650x350") #Dimensiones
@@ -159,8 +159,30 @@ Método de conexión.
     return rows #Retornamos el vector
 ```
 
+Ventana secundaria.
+```python
+  def secundaria(user,password): #Recibe parametros
+    second = Tk()
+    frm = Frame(second) #Convertimos la ventana en un objeto de tipo frame 
+    frm.pack(side=tk.LEFT, padx=110) #Creamos un objeto donde se mostrará la tabla
 
+    tv = ttk.Treeview(frm, columns=(1,2), show="headings", height="3") #Mostramos la tabla mediante una vista de arbol
+    tv.pack()
+ 
+    tv.heading(1, text="ID") #Nombre de las columnas
+    tv.heading(2, text="NOMBRE")
 
+    rows = conexion(user,password) #Llamamos al metodo conexion y guardamos el resultado de este
+
+    for i in rows:
+        tv.insert('', 'end', values=i) #Insertamos dentro de la vista los valores del vector
+    
+    second.title("FORMULARIO DE CONSULTAS") #Titulo de la ventana
+    second.geometry("650x350") #Dimensiones
+    second.resizable(False,False) 
+    second.config(background = "#213141") #Fondo
+    second.mainloop()
+```
 
 
 
