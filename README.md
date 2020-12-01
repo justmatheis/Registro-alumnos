@@ -127,6 +127,38 @@ Creamos las vistas, mediante la libreria TKINTER.
   mywindow.mainloop()
 ```
 
+Metodo que valida el correo y contraseña.
+```python
+  def validar():
+    if username.get()=='ulises2' and str(password.get())=='1234567!': #Verificamos si el usuario y contraseña sean correctos
+        secundaria(username.get(),str(password.get())) #Enviamos los parametros del nombre y usuario a la segunda ventana
+        print("Inicio de sesión correctos") #Se imprime un mensaje en consola
+    else:
+        messagebox.showwarning("ERROR","Contraseña o usuario incorrectos") #Abrimos la ventana emergente de error
+```
+
+Método de conexión.
+```python
+  def conexion(username,password):
+    try:
+        conexion = mysql.connector.connect(
+            host = 'db4free.net',
+            port = 3306,
+            user = username, #Enviamos el parametro del usuario
+            password = password, #Parametro de la contraseña
+            db = 'proyectodb'
+        )
+    except Error as ex:
+        print("Error durante la conexión",ex) #Si se presenta el error en la conexión, imprimimos el siguiente mensaje
+    if conexion.is_connected():
+        print("Conexión exitosa a la base de datos") #Imprimimos un mensaje en consola
+    cursor = conexion.cursor() #Creamos un cursor de conexión
+    sql = "SELECT * FROM tabla_prueba" #Creamos la sentencia mysql que ejecutará el cursor
+    cursor.execute(sql) #Ejecutamos la sentencia mysql
+    rows = cursor.fetchall() #Guardamos los datos de la tabla en un vector
+    return rows #Retornamos el vector
+```
+
 
 
 
