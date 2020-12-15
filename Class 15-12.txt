@@ -1,0 +1,17 @@
+DELIMITER //
+CREATE PROCEDURE categoria(IN nombreCat VARCHAR(50), est CHAR(1))
+BEGIN
+	DECLARE catPorNombre VARCHAR(50);
+    SELECT nom_categoria INTO catPorNombre FROM categorias WHERE nom_categoria = nombreCat;
+    
+    IF catPorNombre IS NULL THEN
+		INSERT INTO categorias(nom_categoria, estado) VALUES (@nombreCat, @est);
+    ELSE
+		select 'CATEGORIA YA EXISTENTE' as ' ';
+	END IF;
+END //
+DELIMITER ;
+
+CALL istCategoria('Refrigerador','A');
+
+select * from categorias;
