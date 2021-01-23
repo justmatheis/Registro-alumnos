@@ -26,11 +26,10 @@ class Alumnos:
             return False #Retorna falso si no se completo correctamente
 
     def consulta(self, datos):
-        cone=self.abrir(datos[1], datos[2]) 
+        cone=self.abrir() 
         cursor=cone.cursor()
-        datos2 = (datos[0], )
         sql="select nombre, apellidos, carrera, semestre from alumnos where no_control=%s" #Sentencia que retorna todos los datos dependiendo del identificador
-        cursor.execute(sql, datos2)
+        cursor.execute(sql, datos)
         return cursor.fetchall() #Retorna el vector que contiene los datos consultados
 
     def recuperar_todos(self):
