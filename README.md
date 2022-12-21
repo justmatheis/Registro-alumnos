@@ -1,5 +1,6 @@
-# Proyecto base de datos
-Repositorio que almacenará los cambios y archivos para el proyecto de taller de base de datos.
+# Registro de alumnos
+En el siguiente repositorio, se muestra el código usado para la creación de un registro de alumnos, con conexión a base de datos.
+
 Para ingresar a la base de datos en la nube usada para este ejemplo:
 
 1.- Ingresamos a: https://www.db4free.net/signup.php
