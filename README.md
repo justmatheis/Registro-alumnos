@@ -7,9 +7,9 @@ Para ingresar a la base de datos en la nube usada para este ejemplo:
 
 2.- En la parte izquierda seleccionamos la opción phpMyAdmin
 
-4.- Dentro de la ventana de inicio de phpMyAdmin, ingresamos el usuario: ulises2 y la contraseña 1234567!
+4.- Dentro de la ventana de inicio de phpMyAdmin, ingresamos el usuario y contraseña.
 
-5.- Ejecutamos el código y listo:)
+5.- Ejecutamos el código y listo.
 
 # Importación
 Librerias usadas en el script
